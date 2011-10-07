@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 $:.unshift File.join(File.dirname(__FILE__), %w{.. lib})
-
 require 'jabber_notifier'
 
-JabberNotifier::Cli.run( :contact=>Choice.choices[:contact], :message=>Choice.choices[:message])
+JabberNotifier::Cli.new(Choice.choices[:config]).notify(:to=>Choice.choices[:contact], :message=>Choice.choices[:message])

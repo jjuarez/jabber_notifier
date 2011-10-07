@@ -7,14 +7,19 @@ Choice.options do
   header ''
   header ' Options:'
 
-  option :contact, :required=>true do
+  option :config, :required=>true do
     short '-c'
-    long  '--contact'
+    long  '--config'
   end 
 
-  option :message, :required=>true do
+  option :to, :required=>true do
+    short '-t'
+    long  '--to'
+  end 
+
+  option :msg, :required=>true do
     short '-m'
-    long  '--message'
+    long  '--msg'
   end 
 
   separator ''

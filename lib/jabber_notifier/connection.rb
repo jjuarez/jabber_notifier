@@ -6,19 +6,9 @@ module JabberNotifier
 
   class Connection
   
-    def initialize(options={})
+    def initialize(username, password)
     
-      options = { 
-        :domain     =>"jabber.cti.csic.es", 
-        :username   =>"user@jabber.cti.csic.es", 
-        :password   =>"****"
-      }.merge(options)
-
-      @username   = options[:username]
-      @password   = options[:password]
-      @sleep_time = options[:sleep_time]
-      @connection = ::Jabber::Simple.new(@username, @password)
-      
+      @connection = Jabber::Simple.new(username, password)
       self
     end  
   
@@ -27,13 +17,14 @@ module JabberNotifier
       options = { :sleep_time=>1 }.merge(options)
       
       @connection.deliver(to, message)
-      sleep(options[:sleep_time])
-      
+      sleep(options[:sleep_time]) if options[:sleep_time] > 0
       self
     end    
     
     def disconnect
-      @connection.disconnect() if @connection
+      
+      @connection.disconnect
+      self
     end
   end
 end
