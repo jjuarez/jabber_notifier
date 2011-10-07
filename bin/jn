@@ -3,4 +3,5 @@
 $:.unshift File.join(File.dirname(__FILE__), %w{.. lib})
 require 'jabber_notifier'
 
-JabberNotifier::Cli.new(Choice.choices[:config]).notify(:to=>Choice.choices[:contact], :message=>Choice.choices[:message])
+JabberNotifier::Cli.new(Choice.choices[:config]).notify(:to =>Choice.choices[:to], 
+                                                        :msg=>Choice.choices[:msg])
