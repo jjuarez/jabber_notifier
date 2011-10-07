@@ -10,8 +10,8 @@ module JabberNotifier
     
       options = { 
         :domain     =>"jabber.cti.csic.es", 
-        :username   =>"nagios@jabber.cti.csic.es", 
-        :password   =>"nagios606"
+        :username   =>"user@jabber.cti.csic.es", 
+        :password   =>"****"
       }.merge(options)
 
       @username   = options[:username]
