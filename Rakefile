@@ -20,8 +20,8 @@ Jeweler::Tasks.new do |gem|
   gem.name        = "jabber_notifier"
   gem.homepage    = "http://github.com/jjuarez/jabber_notifier"
   gem.license     = "MIT"
-  gem.summary     = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary     = %Q{Cli Jabber notifier}
+  gem.description = %Q{Cli Jabber notifier designed for Nagios notifications}
   gem.email       = "javier.juarez@gmail.com"
   gem.authors     = ["javier.juarez"]
 end
