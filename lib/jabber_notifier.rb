@@ -1,11 +1,32 @@
-$:.unshift File.join(File.dirname(__FILE__))
+require 'rubygems'
+require 'yaml'
+require 'xmpp4r-simple'
 
-begin 
-  require 'jabber_notifier/options_parser'
-  require 'jabber_notifier/connection'
-  require 'jabber_notifier/cli'
+
+module JabberNotifier
   
-rescue LoadError=>e
-  $stderr.puts(e.message)
-  exit 1
+  class Connection
+    
+    def self.configure(config_file)      
+      Connection.new(YAML.load_file(config_file))
+    end
+      
+    def initialize(config)
+      
+      @connection = Jabber::Simple.new(config[:username], config[:password])
+      self
+    end
+    
+    def notify(to, msg, delay=1.0)
+
+      raise "Not connecteted" unless @connection.connected?
+      
+      @connection.deliver(to, msg, :groupchat)
+      sleep(delay)
+    end    
+    
+    def close      
+      @connection.disconnect if @connection.connected?
+    end 
+  end
 end

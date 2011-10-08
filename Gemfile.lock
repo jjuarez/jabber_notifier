@@ -21,7 +21,8 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.0.0)
   choice
-  jeweler (~> 1.6.4)
+  jeweler
+  rake
   rdoc
   shoulda
   xmpp4r-simple
