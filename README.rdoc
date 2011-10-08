@@ -1,6 +1,7 @@
-= jabber_notifier
+= JBabber Notifier
 
 Herramienta basica para las notificaciones desde Nagios
+
 
 == Copyright
 
