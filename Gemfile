@@ -1,16 +1,14 @@
-source "http://slmirror.csic.es/rubygems/"
-source "http://rubygems.org"
-
+source "https://rubygems.org"
 
 gem "choice"
+gem "xmpp4r", "0.5"
 gem "xmpp4r-simple"
-
 
 group :development do
 
   gem "rake"
   gem "rdoc"
-  gem "shoulda", ">= 0"
-  gem "bundler", "~> 1.0.0"
+  gem "shoulda"
+  gem "bundler"
   gem "jeweler" 
 end

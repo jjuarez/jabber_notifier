@@ -1,6 +1,5 @@
 GEM
-  remote: http://slmirror.csic.es/rubygems/
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     choice (0.1.4)
     git (1.2.5)
@@ -19,10 +18,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.0.0)
+  bundler
   choice
   jeweler
   rake
   rdoc
   shoulda
+  xmpp4r (= 0.5)
   xmpp4r-simple
