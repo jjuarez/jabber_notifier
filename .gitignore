@@ -5,16 +5,11 @@
 .yardoc
 Gemfile.lock
 InstalledFiles
-_yardoc
-coverage
-doc/
-lib/bundler/man
 pkg
 rdoc
 spec/reports
-test/tmp
-test/version_tmp
 tmp
+examples/settings.yaml
 *.bundle
 *.so
 *.o
@@ -22,4 +17,3 @@ tmp
 mkmf.log
 .DS_Store
 *.swp
-test/fixtures/*.yml
