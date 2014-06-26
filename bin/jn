@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+$:<< File.join(File.dirname(__FILE__), %w{.. lib})
+require 'jabber_notifier'
+
+##
+# ::main::
+JabberNotifier::Cli.run(
+    :config  =>Choice.choices[:config],
+    :to      =>Choice.choices[:to],
+    :message =>Choice.choices[:message],
+    :delay   =>Choice.choices[:delay]
+)
