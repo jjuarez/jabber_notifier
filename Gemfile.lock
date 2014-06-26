@@ -1,28 +1,37 @@
+PATH
+  remote: .
+  specs:
+    jabber_notifier (1.1.0)
+      choice
+      xmpp4r-simple-19
+
 GEM
   remote: https://rubygems.org/
   specs:
-    choice (0.1.4)
-    git (1.2.5)
-    jeweler (1.6.4)
-      bundler (~> 1.0)
-      git (>= 1.2.5)
-      rake
+    choice (0.1.6)
+    diff-lcs (1.2.5)
     rake (0.9.2)
-    rdoc (3.9.4)
-    shoulda (2.11.3)
-    xmpp4r (0.5)
-    xmpp4r-simple (0.8.8)
+    rspec (3.0.0)
+      rspec-core (~> 3.0.0)
+      rspec-expectations (~> 3.0.0)
+      rspec-mocks (~> 3.0.0)
+    rspec-core (3.0.2)
+      rspec-support (~> 3.0.0)
+    rspec-expectations (3.0.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.0.0)
+    rspec-mocks (3.0.2)
+      rspec-support (~> 3.0.0)
+    rspec-support (3.0.2)
+    xmpp4r (0.5.6)
+    xmpp4r-simple-19 (1.0.0)
       xmpp4r (>= 0.3.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
-  choice
-  jeweler
+  bundler (~> 1.6)
+  jabber_notifier!
   rake
-  rdoc
-  shoulda
-  xmpp4r (= 0.5)
-  xmpp4r-simple
+  rspec
