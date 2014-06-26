@@ -1,0 +1,4 @@
+---
+  username: 'user@jabber.example.org'
+  password: 'supersecret'
+  delay: 1.0
