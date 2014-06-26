@@ -1,9 +1,0 @@
-= JBabber Notifier
-
-Herramienta basica para las notificaciones desde Nagios
-
-
-== Copyright
-
-Copyright (c) 2011 javier.juarez. See LICENSE.txt for further details.
-
