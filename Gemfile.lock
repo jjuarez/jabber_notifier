@@ -10,7 +10,7 @@ GEM
   specs:
     choice (0.1.6)
     diff-lcs (1.2.5)
-    rake (0.9.2)
+    rake (12.3.3)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
       rspec-expectations (~> 3.0.0)
@@ -31,7 +31,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.6)
+  bundler (~> 2.1)
   jabber_notifier!
-  rake
+  rake (~> 12.3.3)
   rspec
+
+BUNDLED WITH
+   2.1.4
